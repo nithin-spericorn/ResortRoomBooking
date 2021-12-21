@@ -162,16 +162,13 @@ export const Room = () => {
     console.log(id)
   history.push(`/user/${id}`)
 
-    //{user && <Link to="/profile"/>}
-    //update cart
-    //dispatch(addProduct({product,quantity,color,size,price:product.price*quantity}))
-   // dispatch(addProduct({...product,quantity,color,size,price:product.price*quantity}))
+    
 
   }
   const sizehandle=(s)=>{
     setSize(s)
   }
-//console.log(product.room_title)
+
     return (
         <Container>
            

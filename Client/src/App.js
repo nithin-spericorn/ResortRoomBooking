@@ -33,6 +33,7 @@ function App() {
   const token=useSelector(state=>state.user.currentUser);
   /*let user=token.isAdmin===0;
   let admin=token.isAdmin===1;*/
+  //hai nithin
   var decoded = jwt.decode(token);
  let isAdmin
   
@@ -52,53 +53,25 @@ function App() {
        <Route exact path="/gst/:id" component={Guest}/>
        <Route exact path="/p"><Profile/></Route>
        <Route exact path="/userbook/:id" component={UserBook}/>
-
-         <Route exact path="/login">
+       <Route exact path="/login">
           
            {token?<Category/>:<Login/>}
          
-         </Route>
+       </Route>
          
-         <Route exact path="/register">
-           <Register/>
-         </Route>
-         <Route exact path="/rooms">
-           <Category/>
-         </Route>
-         <Route exact path="/rooms/:category"> <RoomList/> </Route>
+       <Route exact path="/register">
+       <Register/>
+       </Route>
+       <Route exact path="/rooms">
+       <Category/>
+       </Route>
+        <Route exact path="/rooms/:category"> <RoomList/> </Route>
          <Route  exact path="/:id"> <Room/> </Route>
     
       
        </Switch>
-    
-       
-
     </Router>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* <Switch>
-        <Route path="/welcome">
-          <Welcome/>
-        </Route>
-        <Route path="/products">
-          <Products/>
-        </Route>
-      </Switch>*/
